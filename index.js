@@ -13,12 +13,17 @@ app.get("/", (req, res) => {
 });
 
 app.post("/scan", (req, res) => {
-    const url = req.body.url;
-    if (url.length === 0)
+    const nome = req.body.nome;
+    const funcao = req.body.funcao;
+    const endereco = req.body.endereco;
+    const contato = req.body.contato;
+    const whats = req.body.whats;
+
+    if (whats.length === 0)
         res.send("Dados Invalidos");
-    qr.toDataURL(url, (err, src) => {
+    qr.toDataURL(whats, (err, src) => {
         if (err) res.send("Erro!");
-        res.render("scan", { src });
+        res.render("scan", { corpo: req.body, src });
     });
 });
 
