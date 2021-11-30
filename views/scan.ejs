@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de QRCode</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: block;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .corpo {
+
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .cpr {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgb(248, 248, 248);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .titulo {
+            justify-content: center;
+        }
+
+        .cartao {
+            background: rgb(255, 255, 255);
+            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+            align-items: center;
+            padding: 10px;
+            display: flex;
+        }
+
+        .fForm {
+
+            margin: 5px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .form {
+
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <h1>QRCode gerado!</h1>
-        <img src=<%=src%> alt="QRCode">
-        <hr>
-        <p>Faça o Scaneamento do QRCode para ver os dados!</p>
-        <a href="/">Voltar</a>
+    <div class="corpo">
+        <div class="cpr">
+            <h1 class="titulo">QR-Code gerado!</h1>
+            <div class="cartao">
+                <img src=<%=src%> alt="QRCode">
+                <div class="fForm">
+                    <div class="form">
+                        <div>
+                            Nome: <%-corpo.nome -%>
+                        </div>
+                        <div>
+                            Função: <%-corpo.funcao -%>
+                        </div>
+                        <div>
+                            Contato: <%-corpo.contato -%>
+                        </div>
+                        <div>
+                            Endereço: <%-corpo.endereco -%>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p>Faça o Scaneamento do QR-Code para ver os dados!</p>
+            <a href="/">Voltar</a>
+        </div>
     </div>
 </body>
 
