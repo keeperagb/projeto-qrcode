@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+.corpo {
+    display: flex;
+    justify-content: center;
+}
+
+.cpr {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    justify-content: center;
+}
+
+.cartao {
+    align-items: center;
+    padding: 10px;
+    display: flex;
+}
+
+.fForm {
+
+    margin: 5px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
